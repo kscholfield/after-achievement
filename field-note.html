@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Anchors That Travel — After Achievement</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F8F6F2;
+      --bg-alt: #F0EDE7;
+      --ink: #1C1917;
+      --ink-2: #57534E;
+      --ink-3: #A8A29E;
+      --green: #2C4A3E;
+      --border: #E2DDD7;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+
+    html { font-size: 17px; }
+    body { background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 0 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo { font-family: var(--serif); font-size: 1.1rem; color: var(--green); font-weight: normal; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; font-size: 0.85rem; letter-spacing: 0.03em; color: var(--ink-2); }
+    .nav-links li a:hover { color: var(--green); }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem 0;
+      font-size: 0.78rem;
+      color: var(--ink-3);
+      letter-spacing: 0.03em;
+    }
+    .breadcrumb a { color: var(--green); }
+    .breadcrumb span { margin: 0 0.4rem; }
+
+    /* ARTICLE HEADER */
+    .article-header {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .article-section {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 1rem;
+    }
+    .article-header h1 {
+      font-family: var(--serif);
+      font-size: 2.1rem;
+      font-weight: normal;
+      line-height: 1.25;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+    .article-meta {
+      font-size: 0.8rem;
+      color: var(--ink-3);
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    /* ARTICLE BODY */
+    .article-body {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 4rem;
+    }
+    .article-body p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--ink-2);
+      margin-bottom: 1.4rem;
+    }
+    .article-body p:first-child {
+      font-size: 1.1rem;
+      color: var(--ink);
+    }
+    .article-body h2 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: var(--ink);
+      margin: 2.5rem 0 1rem;
+    }
+    .article-body blockquote {
+      border-left: 3px solid var(--green);
+      margin: 2rem 0;
+      padding: 0.25rem 0 0.25rem 1.5rem;
+    }
+    .article-body blockquote p {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    /* PRINCIPLE CALLOUT */
+    .principle {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--green);
+      padding: 1.25rem 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .principle-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 0.4rem;
+    }
+    .principle p {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      color: var(--ink);
+      line-height: 1.6;
+      margin-bottom: 0 !important;
+    }
+
+    /* NEXT / PREV */
+    .article-nav {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem 2rem 3rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+    }
+    .article-nav-item { max-width: 45%; }
+    .article-nav-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.3rem; }
+    .article-nav-title { font-family: var(--serif); color: var(--ink); line-height: 1.4; }
+    .article-nav-title:hover { color: var(--green); }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--ink-3);
+    }
+    .footer-logo { font-family: var(--serif); color: var(--green); }
+
+    /* TOGGLE */
+    .view-toggle { position: fixed; bottom: 1.5rem; right: 1.5rem; display: flex; gap: 0.5rem; }
+    .view-btn {
+      padding: 0.5rem 1rem; font-size: 0.75rem; border: 1px solid var(--border);
+      background: var(--bg); color: var(--ink-2); cursor: pointer; border-radius: 3px;
+      font-family: var(--sans);
+    }
+    .view-btn.active { background: var(--green); color: white; border-color: var(--green); }
+    .view-btn:hover:not(.active) { background: var(--bg-alt); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">After Achievement</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">The Framework</a></li>
+      <li><a href="field-note.html">Field Notes</a></li>
+      <li><a href="#">Letters</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span>›</span><a href="#">Field Notes</a><span>›</span>Building Anchors That Travel
+  </div>
+
+  <header class="article-header">
+    <p class="article-section">Field Notes</p>
+    <h1>Building Anchors That Travel</h1>
+    <div class="article-meta">
+      <span>Keith Scholfield</span>
+      <span>January 2026</span>
+      <span>5 min read</span>
+    </div>
+  </header>
+
+  <article class="article-body">
+
+    <p>The anchors that hold a life together at home rarely survive the road unchanged. Not because travel is undisciplined — but because the environment that made those anchors easy is gone.</p>
+
+    <p>The gym is different. The schedule is different. The kitchen is not there at all. What worked as a structure at home was, in part, a product of the infrastructure around it. Remove the infrastructure, and the habit has to carry itself.</p>
+
+    <p>Most habits can't.</p>
+
+    <h2>What an anchor actually is</h2>
+
+    <p>An anchor is not a routine. It is something more specific — a practice that holds a line between who you intend to be and what the environment is pulling you toward.</p>
+
+    <p>At home, the environment tends to pull toward what you've built: familiar food, familiar schedules, familiar demands. On the road, the pull is different. Indulgence becomes easy. Structure becomes optional. Nothing requires maintenance because nothing requires you at all.</p>
+
+    <blockquote>
+      <p>Discipline that once felt automatic begins to require effort. Habits that once reinforced strength begin to soften.</p>
+    </blockquote>
+
+    <p>The anchors that travel well are the ones you can carry in your body rather than in your infrastructure. They don't depend on the right gym, the right kitchen, or the right hour. They require only a decision.</p>
+
+    <h2>The ones that held</h2>
+
+    <p>Some things proved more portable than I expected. Movement in the morning — not a full session, but something — survived most environments. It did not require a gym. A cabin deck, a ship's narrow corridor, a hotel room. The body doesn't need the same conditions every day. It needs use.</p>
+
+    <p>Reading held. Writing held — partly because it requires no equipment, and partly because travel generates the kind of observation that makes writing natural. You notice more when everything is unfamiliar.</p>
+
+    <p>What didn't hold, initially, was anything that depended on a specific context. The assumption that I would train properly once the right conditions appeared. The deferred discipline. The plan to return to structure once we were back.</p>
+
+    <p>Back never arrives fast enough. The body doesn't wait.</p>
+
+    <div class="principle">
+      <p class="principle-label">Working Principle</p>
+      <p>Build anchors that can travel. If a practice only survives your home environment, it is not yet a practice — it is a convenience.</p>
+    </div>
+
+    <h2>What this is about</h2>
+
+    <p>This is not a note about fitness. It is a note about what holds when structure disappears — and what doesn't.</p>
+
+    <p>In the second game, external structure is largely gone. The guardrails that shaped behavior for decades have been removed. What replaces them is whatever you choose to require of yourself.</p>
+
+    <p>The anchors that travel are the ones worth keeping. They are the practices that don't need the environment's help. They hold not because the conditions are right, but because you decided they would.</p>
+
+    <p>That is a different kind of discipline than the first game required. Harder in some ways. More honest in others.</p>
+
+  </article>
+
+  <nav class="article-nav">
+    <div class="article-nav-item">
+      <p class="article-nav-label">← Previous</p>
+      <a href="#" class="article-nav-title">Walking Without a Script</a>
+    </div>
+    <div class="article-nav-item" style="text-align:right">
+      <p class="article-nav-label">Next →</p>
+      <a href="#" class="article-nav-title">The Tourist Bubble</a>
+    </div>
+  </nav>
+
+  <footer>
+    <span class="footer-logo">After Achievement</span>
+    <div style="display:flex;gap:1.5rem;font-size:0.8rem;color:var(--ink-3)">
+      <a href="#">Archive</a>
+      <a href="#">Newsletter</a>
+    </div>
+  </footer>
+
+  <div class="view-toggle">
+    <button class="view-btn" onclick="window.location='index.html'">Home</button>
+    <button class="view-btn active" onclick="window.location='field-note.html'">Field Note</button>
+  </div>
+
+</body>
+</html>
