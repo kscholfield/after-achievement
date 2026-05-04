@@ -138,6 +138,11 @@
       cursor: pointer;
     }
     .library-card:hover { background: var(--bg-alt); }
+    .library-card.placeholder { cursor: default; }
+    .library-card.placeholder:hover { background: var(--bg); }
+    .library-card.placeholder .card-title { color: var(--ink-3); }
+    .library-card.placeholder .card-desc { color: var(--ink-3); }
+    .library-card.placeholder .card-tag { color: var(--ink-3); border-color: var(--border); }
     .card-number {
       font-size: 0.7rem;
       letter-spacing: 0.1em;
@@ -430,10 +435,9 @@
     <a href="index.html" class="nav-logo">After Achievement</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="#">The Framework</a></li>
-      <li><a href="field-note.html">Field Notes</a></li>
-      <li><a href="#">Letters</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="field-notes.html">Field Notes</a></li>
+      <li><a href="#navigate">Books</a></li>
+      <li><a href="about.html">About</a></li>
     </ul>
   </nav>
 
@@ -442,11 +446,11 @@
     <p class="hero-label">AfterAchievement.com</p>
     <h1>Most people plan for achievement.<br>Almost no one plans for what comes after.</h1>
     <div class="hero-body">
-      <p>The second game begins when the first one ends — when external structure disappears, the metrics go quiet, and you are free to do anything. That freedom is harder than it looks.</p>
-      <p>This site is a set of frameworks, field notes, and hard-won observations for navigating that transition — and for building something worth passing on to the people who come after you.</p>
-      <p>There is no start-to-finish here. Begin where something feels relevant.</p>
+      <p>This is not a travel blog or a highlight reel. It is a collection of field notes from a life in motion — written while paying closer attention than I once did.</p>
+      <p>It isn't about retirement. It's about learning to live well while energy, health, and curiosity are still abundant — and how to notice what deserves carrying forward.</p>
+      <p>Think of these as working notes rather than finished conclusions. They are written for family first, then for anyone else who finds value in reflecting before the road narrows.</p>
     </div>
-    <a href="#navigate" class="hero-cta">Find your starting point →</a>
+    <a href="#navigate" class="hero-cta">Explore the work →</a>
   </section>
 
   <!-- START HERE BAND -->
@@ -454,7 +458,7 @@
     <div class="start-here-marker">→</div>
     <div class="start-here-content">
       <h2>New here? Start with the question that brought you.</h2>
-      <p>If you just left something — a company, a career, a chapter — start with <a href="#" class="inline-link">The Second Game</a>. If you're thinking about what you want the next twenty years to look like, start with <a href="#" class="inline-link">The Long View</a>. If something specific is pulling at you, <a href="#" class="inline-link">the Field Notes</a> are the shortest path in.</p>
+      <p>If you just left something — a company, a career, a chapter — start with <a href="the-second-game.html" class="inline-link">The Second Game</a>. If you're thinking about what you want the next twenty years to look like, start with <a href="the-long-view.html" class="inline-link">The Long View</a>. If something specific is pulling at you, <a href="field-notes.html" class="inline-link">the Field Notes</a> are the shortest path in.</p>
     </div>
   </div>
 
@@ -466,46 +470,46 @@
     </div>
     <div class="library-grid">
 
-      <div class="library-card">
+      <div class="library-card" onclick="window.location='the-second-game.html'">
         <p class="card-number">01</p>
         <p class="card-title">The Second Game</p>
         <p class="card-desc">What happens after achievement — when the rules you mastered stop applying and life requires a different kind of work.</p>
         <span class="card-tag">Book</span>
       </div>
 
-      <div class="library-card">
+      <div class="library-card" onclick="window.location='the-long-view.html'">
         <p class="card-number">02</p>
         <p class="card-title">The Long View</p>
         <p class="card-desc">Shaping an intentional life after achievement — on the Builder, Steward, and Elder roles, the four forms of capital, and what the second half of life can look like with attention and intention.</p>
         <span class="card-tag">Book</span>
       </div>
 
-      <div class="library-card">
+      <div class="library-card placeholder">
         <p class="card-number">03</p>
         <p class="card-title">The Pillars</p>
         <p class="card-desc">Five load-bearing areas of life in the second game: health, relationships, wealth, legacy, and energy and attention.</p>
-        <span class="card-tag">Framework</span>
+        <span class="card-tag">Coming</span>
       </div>
 
-      <div class="library-card">
+      <div class="library-card" onclick="window.location='field-notes.html'">
         <p class="card-number">04</p>
         <p class="card-title">Field Notes</p>
         <p class="card-desc">Short dispatches from the transition — observations from travel, daily practice, and the ongoing work of paying attention.</p>
         <span class="card-tag">Ongoing</span>
       </div>
 
-      <div class="library-card">
+      <div class="library-card placeholder">
         <p class="card-number">05</p>
         <p class="card-title">For the Next Generation</p>
         <p class="card-desc">What is worth transmitting — and how. Letters, frameworks, and reflections intended for my daughters and, eventually, their families.</p>
-        <span class="card-tag">Legacy</span>
+        <span class="card-tag">Coming</span>
       </div>
 
-      <div class="library-card">
+      <div class="library-card placeholder">
         <p class="card-number">06</p>
         <p class="card-title">Operating in Motion</p>
         <p class="card-desc">How to maintain structure, training, and purpose when home base is gone. Built through a year of extended international travel.</p>
-        <span class="card-tag">Systems</span>
+        <span class="card-tag">Coming</span>
       </div>
 
     </div>
@@ -695,41 +699,19 @@
       </div>
     </div>
 
-  </section>
-
-  <!-- BOOKS -->
-  <section class="books-section">
-    <p class="books-heading">Books</p>
-    <div class="books-grid">
-
-      <div class="book-card">
-        <a href="the-long-view.html"><img src="long-view-cover.jpg" alt="The Long View"></a>
-        <div class="book-card-info">
-          <p class="book-card-title"><a href="the-long-view.html">The Long View</a></p>
-          <p class="book-card-subtitle">Shaping an Intentional Life After Achievement</p>
-          <a class="book-card-link" href="the-long-view.html">About the book →</a>
-        </div>
-      </div>
-
-      <div class="book-card">
-        <a href="the-second-game.html"><img src="second-game-cover.jpg" alt="The Second Game"></a>
-        <div class="book-card-info">
-          <p class="book-card-title"><a href="the-second-game.html">The Second Game</a></p>
-          <p class="book-card-subtitle">Life After Achievement</p>
-          <a class="book-card-link" href="the-second-game.html">About the book →</a>
-        </div>
-      </div>
-
+    <div style="padding-top:1.5rem">
+      <a href="field-notes.html" style="font-size:0.85rem;color:var(--green);letter-spacing:0.03em;">See all field notes →</a>
     </div>
+
   </section>
 
   <!-- ABOUT STRIP -->
   <section class="about-strip" id="about">
     <div class="about-initials">KS</div>
     <div class="about-text">
-      <h3>Why this exists</h3>
-      <p>I spent thirty years building things — a military career, then twenty years of schools. When that ended, I had no idea how to navigate what came next. Most of what's here I had to figure out the hard way.</p>
-      <p style="margin-top:0.5rem"><a href="#" style="color:var(--green); font-size:0.85rem;">Full story →</a></p>
+      <h3>Keith Scholfield</h3>
+      <p>Nearly forty years of building — a business career, then five Montessori schools founded and grown with Shirley over nearly two decades. When that chapter ended, I found myself navigating territory no one had prepared me for: what to do when the work that defined you is done. These are the field notes from that transition.</p>
+      <p style="margin-top:0.5rem"><a href="about.html" style="color:var(--green); font-size:0.85rem;">Full story →</a></p>
     </div>
   </section>
 
@@ -738,14 +720,9 @@
     <div class="footer-links">
       <a href="#">Archive</a>
       <a href="#">Newsletter</a>
-      <a href="#">AfterAchievement.com</a>
     </div>
   </footer>
 
-  <div class="view-toggle">
-    <button class="view-btn active" onclick="window.location='index.html'">Home</button>
-    <button class="view-btn" onclick="window.location='field-note.html'">Field Note</button>
-  </div>
 
 </body>
 </html>
