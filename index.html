@@ -174,41 +174,42 @@
       border-radius: 2px;
     }
 
-    /* ── START HERE BAND ── */
+    /* ── START HERE ── */
     .start-here {
       max-width: 740px;
       margin: 0 auto;
-      padding: 3rem 2rem;
+      padding: 3.5rem 2rem;
       border-bottom: 1px solid var(--border);
-      display: flex;
-      gap: 2.5rem;
-      align-items: flex-start;
     }
-    .start-here-marker {
-      font-family: var(--serif);
-      font-size: 2.5rem;
-      color: var(--green);
-      opacity: 0.25;
-      line-height: 1;
-      flex-shrink: 0;
-      margin-top: 0.2rem;
-    }
-    .start-here-content h2 {
-      font-family: var(--serif);
-      font-size: 1.15rem;
-      font-weight: normal;
-      color: var(--ink);
-      margin-bottom: 0.5rem;
-      line-height: 1.35;
-    }
-    .start-here-content p {
+    .start-here-intro {
       font-size: 0.9rem;
-      color: var(--ink-2);
-      line-height: 1.7;
+      color: var(--ink-3);
+      margin-bottom: 2rem;
+      font-style: italic;
     }
-    .start-here-content a.inline-link {
-      color: var(--green);
-      border-bottom: 1px solid var(--border);
+    .start-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .start-item {
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .start-item:last-child { border-bottom: 1px solid var(--border); }
+    .start-title {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .start-title:hover { color: var(--green); }
+    .start-desc {
+      font-size: 0.88rem;
+      color: var(--ink-3);
+      line-height: 1.6;
     }
 
     /* ── RECENT FIELD NOTES ── */
@@ -446,21 +447,37 @@
     <p class="hero-label">AfterAchievement.com</p>
     <h1>Most people plan for achievement.<br>Almost no one plans for what comes after.</h1>
     <div class="hero-body">
-      <p>This is not a travel blog or a highlight reel. It is a collection of field notes from a life in motion — written while paying closer attention than I once did.</p>
-      <p>It isn't about retirement. It's about learning to live well while energy, health, and curiosity are still abundant — and how to notice what deserves carrying forward.</p>
-      <p>Think of these as working notes rather than finished conclusions. They are written for family first, then for anyone else who finds value in reflecting before the road narrows.</p>
+      <p>We sold our business after years of building it. What followed — the freedom, the travel, the unstructured days — turned out to be more complicated than we expected. Not harder, exactly. Just less legible. The skills that organized the first half of life didn't automatically translate to the second.</p>
+      <p>I started writing to make sense of it. These are the notes from that process — field observations written while paying closer attention than I once did. They're about what genuinely endures, what deserves to be carried forward, and how to live deliberately when nothing is required of you.</p>
+      <p>This isn't about retirement. It's about learning to live well while energy, health, and curiosity are still abundant.</p>
     </div>
     <a href="#navigate" class="hero-cta">Explore the work →</a>
   </section>
 
-  <!-- START HERE BAND -->
-  <div class="start-here">
-    <div class="start-here-marker">→</div>
-    <div class="start-here-content">
-      <h2>New here? Start with the question that brought you.</h2>
-      <p>If you just left something — a company, a career, a chapter — start with <a href="the-second-game.html" class="inline-link">The Second Game</a>. If you're thinking about what you want the next twenty years to look like, start with <a href="the-long-view.html" class="inline-link">The Long View</a>. If something specific is pulling at you, <a href="field-notes.html" class="inline-link">the Field Notes</a> are the shortest path in.</p>
-    </div>
-  </div>
+  <!-- START HERE -->
+  <section class="start-here">
+    <p class="section-label">Start Here</p>
+    <p class="start-here-intro">This work isn't meant to be read chronologically. But if you're looking for a place to begin:</p>
+    <ul class="start-list">
+      <li class="start-item">
+        <a href="what-endures.html" class="start-title">What Endures vs What Disappears</a>
+        <p class="start-desc">The question that started everything. A walk through Roman ruins in Barcelona and what it raised about time, continuity, and what gets carried forward.</p>
+      </li>
+      <li class="start-item">
+        <a href="freedom-direction.html" class="start-title">Freedom Without Direction</a>
+        <p class="start-desc">Why the freedom that follows achievement is harder than it looks — and what drift actually feels like from the inside.</p>
+      </li>
+      <li class="start-item">
+        <a href="turning-freedom-fulfillment.html" class="start-title">Turning Freedom Into Fulfillment</a>
+        <p class="start-desc">The difference between a life that's enjoyable and one that's deliberate. On structure, purpose, and what fills the space when nothing is required.</p>
+      </li>
+      <li class="start-item">
+        <a href="stewarding.html" class="start-title">The Second Game: From Building to Stewarding</a>
+        <p class="start-desc">What changes when the work shifts from building to stewarding — and why that transition requires more intention than most people expect.</p>
+      </li>
+    </ul>
+    <a href="field-notes.html" class="hero-cta">View all field notes →</a>
+  </section>
 
   <!-- NAVIGATE GRID -->
   <section class="navigate" id="navigate">
@@ -561,141 +578,6 @@
         <p class="note-section">Field Notes</p>
         <p class="note-title"><a href="choosing-pillars.html">Choosing Your Pillars</a></p>
         <p class="note-excerpt">After freedom without direction, structure returns — but chosen rather than imposed. On the few areas that, when maintained, allow everything else to function well.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">March 2026</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="freedom-direction.html">Freedom Without Direction</a></p>
-        <p class="note-excerpt">The part no one talks about: when the obligations fall away, what replaces them is space — and space, without direction, can feel surprisingly unstable.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">March 2026</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="stewarding.html">The Second Game: From Building to Stewarding</a></p>
-        <p class="note-excerpt">If the first game is about building and much of what we build eventually disappears, what is the second game about? On the shift from accumulation to continuity.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">March 2026</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="what-endures.html">What Endures vs What Disappears</a></p>
-        <p class="note-excerpt">Walking through Roman ruins beneath Barcelona, and what it reveals about what we build — and what we leave behind.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">February 2026</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="lucky-motherfuckers.html">Lucky Motherf*ckers</a></p>
-        <p class="note-excerpt">Luck doesn't erase effort. It contextualizes it. On what travel makes unavoidable to see.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">January 2026</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="field-note.html">Building Anchors That Travel</a></p>
-        <p class="note-excerpt">When travel becomes the routine rather than a break from it, anchors tied to place stop holding. On building practices that carry themselves.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">January 2026</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="tourist-bubble.html">The Tourist Bubble</a></p>
-        <p class="note-excerpt">On the distance created by managed experiences — and what becomes possible when you let the bubble thin.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">January 2026</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="traveler-legs.html">Getting Your Traveler Legs Back</a></p>
-        <p class="note-excerpt">A day in São Tomé with no agenda — walking, navigating, adapting — and what it felt like when discomfort gave way to ease.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">January 2026</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="freedom-from-performance.html">Freedom From Performance</a></p>
-        <p class="note-excerpt">On the quiet pressure to extract meaning from every moment — and what becomes possible when you stop performing the experience.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">January 2026</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="walking-without-script.html">Walking Without a Script</a></p>
-        <p class="note-excerpt">A Sunday in Lomé with no tour, no plan, and more exposed streets than the websites suggested. On calibration, and what a hard day can give back.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">January 2026</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="bus-window-problem.html">The Bus Window Problem</a></p>
-        <p class="note-excerpt">Grand Bassam, Ivory Coast: on the delay between seeing something and actually understanding it — and what a cool shower revealed about the view from inside the bus.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">January 2026</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="how-far-to-walk.html">How Far Is Too Far to Walk Back?</a></p>
-        <p class="note-excerpt">A stop in Ghana, an unreliable taxi, and the rule that turned out to be about more than distance.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">December 2025</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="between-city-ship.html">Between the City and the Ship</a></p>
-        <p class="note-excerpt">Leaving Barcelona for the cruise: on how quickly the environment organizes you — and what that reveals about where freedom actually lives.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">December 2025</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="turning-freedom-fulfillment.html">Turning Freedom Into Fulfillment</a></p>
-        <p class="note-excerpt">Five months after selling the business: on the sprint into freedom, what drift actually feels like, and why freedom turned out to be the responsibility, not the reward.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">November 2025</span>
-      <div class="note-content">
-        <p class="note-section">Field Notes</p>
-        <p class="note-title"><a href="panama-canal.html">The Panama Canal and the Problem of Freedom</a></p>
-        <p class="note-excerpt">I expected freedom to carry me. Instead, I discovered that without intention, freedom decays.</p>
-      </div>
-    </div>
-
-    <div class="note-item">
-      <span class="note-date">November 2025</span>
-      <div class="note-content">
-        <p class="note-section">Travel Essay</p>
-        <p class="note-title"><a href="hana.html">Hana, Makawao, and What Quietly Felt Better</a></p>
-        <p class="note-excerpt">A week in upcountry Maui made a preference visible that a decade of resort stays had kept invisible.</p>
       </div>
     </div>
 
