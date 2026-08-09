@@ -33,6 +33,14 @@
     .article-nav-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.3rem; }
     .article-nav-title { font-family: var(--serif); color: var(--ink); line-height: 1.4; }
     .article-nav-title:hover { color: var(--green); }
+    .photo-grid { max-width: 700px; margin: 0 auto; padding: 0 2rem 3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .photo-pano figure, .photo-full figure, .photo-pair figure { margin: 0; }
+    .photo-pano img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-full img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .photo-pair img { width: 100%; height: 280px; object-fit: cover; object-position: center; display: block; border-radius: 2px; }
+    figcaption { font-size: 0.72rem; color: var(--ink-3); text-align: center; margin-top: 0.3rem; letter-spacing: 0.02em; }
+    @media (max-width: 500px) { .photo-pair { grid-template-columns: 1fr; } .photo-pair img { height: 220px; } }
     footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--ink-3); }
     .footer-logo { font-family: var(--serif); color: var(--green); }
   </style>
@@ -141,6 +149,77 @@
     <p>Barcelona had been the destination for a week.</p>
     <p>Now it became the starting point for Africa.</p>
   </article>
+  <section class="photo-grid">
+    <div class="photo-full">
+      <figure>
+        <img src="Barcelona-27.jpg" alt="Shirley toasting with a glass of champagne in business class on the flight from Los Angeles to Barcelona">
+        <figcaption>Toasting over the Atlantic, Air France flight from Los Angeles to Barcelona</figcaption>
+      </figure>
+    </div>
+    <div class="photo-pano">
+      <figure>
+        <img src="Barcelona-26.jpg" alt="Aerial view of Plaça del Rei courtyard in the Gothic Quarter, with Barcelona Cathedral tower and medieval stone buildings">
+        <figcaption>Plaça del Rei, Barcelona's Gothic Quarter</figcaption>
+      </figure>
+    </div>
+    <div class="photo-full">
+      <figure>
+        <img src="Barcelona-23.jpg" alt="Interior of the Saló del Tinell, a vast medieval hall with sweeping stone arches and a wooden ceiling">
+        <figcaption>Saló del Tinell, the medieval throne room inside the Royal Palace of Barcelona</figcaption>
+      </figure>
+    </div>
+    <div class="photo-full">
+      <figure>
+        <img src="Barcelona-20.jpg" alt="Barcelona Cathedral with a decorated Christmas tree on the steps in front, crowds of visitors below">
+        <figcaption>Barcelona Cathedral at Christmas, Barri Gòtic</figcaption>
+      </figure>
+    </div>
+    <div class="photo-pair">
+      <figure>
+        <img src="Barcelona-18.jpg" alt="Keith and Shirley selfie in front of a large rock formation at Park Güell, Barcelona" style="object-position: top;">
+        <figcaption>Keith and Shirley at Park Güell, Barcelona</figcaption>
+      </figure>
+      <figure>
+        <img src="Barcelona-14.jpg" alt="The iconic Gaudí-designed entrance pavilions at Park Güell with mosaic decorations and a tall spire, Barcelona city behind">
+        <figcaption>The entrance pavilions at Park Güell, designed by Antoni Gaudí</figcaption>
+      </figure>
+    </div>
+    <div class="photo-full">
+      <figure>
+        <img src="Barcelona-13.jpg" alt="Casa Milà (La Pedrera) on Passeig de Gràcia, Shirley visible among the crowd on the sidewalk below">
+        <figcaption>Casa Milà (La Pedrera) on Passeig de Gràcia</figcaption>
+      </figure>
+    </div>
+    <div class="photo-full">
+      <figure>
+        <img src="Barcelona-12.jpg" alt="Sagrada Família exterior with towers and construction cranes, view from the street">
+        <figcaption>La Sagrada Família, Antoni Gaudí's still-unfinished basilica</figcaption>
+      </figure>
+    </div>
+    <div class="photo-pair">
+      <figure>
+        <img src="Barcelona-11.jpg" alt="Interior of the Sagrada Família with soaring columns and warm amber and pink stained glass windows">
+        <figcaption>Warm stained glass fills the nave of the Sagrada Família</figcaption>
+      </figure>
+      <figure>
+        <img src="Barcelona-07.jpg" alt="Sagrada Família illuminated at night, towers glowing gold against a dark sky with construction cranes visible">
+        <figcaption>Sagrada Família at night</figcaption>
+      </figure>
+    </div>
+    <div class="photo-full">
+      <figure>
+        <img src="Barcelona-03.jpg" alt="Shirley looking out from the Montjuïc cable car with Barcelona's skyline and harbor stretching out below">
+        <figcaption>Shirley in the cable car up to Montjuïc, with all of Barcelona below</figcaption>
+      </figure>
+    </div>
+    <div class="photo-pano">
+      <figure>
+        <img src="Barcelona-02.jpg" alt="Shirley leaning on the railing of the Barceloneta promenade, looking toward the sandy beach and the sea">
+        <figcaption>Shirley on the Barceloneta promenade</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <nav class="article-nav">
     <div class="article-nav-item">
       <p class="article-nav-label">← Previous</p>
