@@ -33,6 +33,14 @@
     .article-nav-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.3rem; }
     .article-nav-title { font-family: var(--serif); color: var(--ink); line-height: 1.4; }
     .article-nav-title:hover { color: var(--green); }
+    .photo-grid { max-width: 700px; margin: 0 auto; padding: 0 2rem 3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .photo-pano figure, .photo-full figure, .photo-pair figure { margin: 0; }
+    .photo-pano img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-full img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .photo-pair img { width: 100%; height: 280px; object-fit: cover; object-position: center; display: block; border-radius: 2px; }
+    figcaption { font-size: 0.72rem; color: var(--ink-3); text-align: center; margin-top: 0.3rem; letter-spacing: 0.02em; }
+    @media (max-width: 500px) { .photo-pair { grid-template-columns: 1fr; } .photo-pair img { height: 220px; } }
     footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--ink-3); }
     .footer-logo { font-family: var(--serif); color: var(--green); }
   </style>
@@ -143,6 +151,65 @@
     <p>But none of these places gave us the feeling Wailea had given us a few weeks earlier—the sense that we wanted to stay longer or come back and settle in for a while.</p>
     <p>And that was useful to discover too.</p>
   </article>
+  <section class="photo-grid">
+    <div class="photo-pair">
+      <figure>
+        <img src="PanamaCanal-18.jpg" alt="Chihuly Garden and Glass installation, Seattle — explosively colorful glass sculptures">
+        <figcaption>Chihuly Garden and Glass, Seattle</figcaption>
+      </figure>
+      <figure>
+        <img src="PanamaCanal-19.jpg" alt="Seattle city skyline at golden hour with Mount Rainier visible in the background">
+        <figcaption>Seattle skyline and Mount Rainier</figcaption>
+      </figure>
+    </div>
+    <div class="photo-full">
+      <figure>
+        <img src="PanamaCanal-01.jpg" alt="Keith and Shirley selfie on the ship deck as it departs Seattle">
+        <figcaption>Departing Seattle on the Norwegian cruise</figcaption>
+      </figure>
+    </div>
+    <div class="photo-pano">
+      <figure>
+        <img src="PanamaCanal-16.jpg" alt="Golden Pacific sunset with sun rays breaking through dramatic clouds">
+        <figcaption>Sunset on the Pacific Ocean</figcaption>
+      </figure>
+    </div>
+    <div class="photo-pano">
+      <figure>
+        <img src="PanamaCanal-06.jpg" alt="Centennial Bridge perfectly framed with the Panama Canal waterway and a ship passing beneath">
+        <figcaption>Centennial Bridge, Panama Canal</figcaption>
+      </figure>
+    </div>
+    <div class="photo-pair">
+      <figure>
+        <img src="PanamaCanal-07.jpg" alt="Cocolí Locks control tower with the Canal de Panamá Cocolí 2016 inscription">
+        <figcaption>Cocolí Locks control tower, Panama Canal</figcaption>
+      </figure>
+      <figure>
+        <img src="PanamaCanal-08.jpg" alt="Looking down the Cocolí Locks with a tanker ship and tugboat below">
+        <figcaption>Looking down the Cocolí Locks</figcaption>
+      </figure>
+    </div>
+    <div class="photo-full">
+      <figure>
+        <img src="PanamaCanal-09.jpg" alt="Bridge of the Americas at dusk with a busy container port below, Panama City">
+        <figcaption>Bridge of the Americas at dusk, Panama City</figcaption>
+      </figure>
+    </div>
+    <div class="photo-pano">
+      <figure>
+        <img src="PanamaCanal-11.jpg" alt="Casco Viejo waterfront with colorful colonial buildings and a sandy cove, Panama City">
+        <figcaption>Casco Viejo, Panama City</figcaption>
+      </figure>
+    </div>
+    <div class="photo-full">
+      <figure>
+        <img src="PanamaCanal-03.jpg" alt="Castillo San Felipe de Barajas fortress, Cartagena, Colombia">
+        <figcaption>Castillo San Felipe de Barajas, Cartagena, Colombia</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <nav class="article-nav">
     <div class="article-nav-item">
       <p class="article-nav-label">← Previous</p>

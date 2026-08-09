@@ -34,10 +34,12 @@
     .article-nav-title { font-family: var(--serif); color: var(--ink); line-height: 1.4; }
     .article-nav-title:hover { color: var(--green); }
     .photo-grid { max-width: 700px; margin: 0 auto; padding: 0 2rem 3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .photo-pano figure, .photo-full figure, .photo-pair figure { margin: 0; }
     .photo-pano img { width: 100%; height: auto; display: block; border-radius: 2px; }
     .photo-full img { width: 100%; height: auto; display: block; border-radius: 2px; }
     .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
     .photo-pair img { width: 100%; height: 280px; object-fit: cover; object-position: center; display: block; border-radius: 2px; }
+    figcaption { font-size: 0.72rem; color: var(--ink-3); text-align: center; margin-top: 0.3rem; letter-spacing: 0.02em; }
     @media (max-width: 500px) { .photo-pair { grid-template-columns: 1fr; } .photo-pair img { height: 220px; } }
     footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--ink-3); }
     .footer-logo { font-family: var(--serif); color: var(--green); }
@@ -240,21 +242,42 @@
 
   <section class="photo-grid">
     <div class="photo-pano">
-      <img src="Lisbon-05.jpg" alt="Lisbon skyline seen from across the Tagus River">
+      <figure>
+        <img src="Lisbon-05.jpg" alt="Lisbon skyline seen from across the Tagus River">
+        <figcaption>Lisbon skyline from across the Tagus River</figcaption>
+      </figure>
     </div>
     <div class="photo-pano">
-      <img src="Lisbon-06.jpg" alt="Praça do Comércio with the Rua Augusta Arch and yellow colonnades">
+      <figure>
+        <img src="Lisbon-06.jpg" alt="Praça do Comércio with the Rua Augusta Arch and yellow colonnades">
+        <figcaption>Praça do Comércio, Lisbon</figcaption>
+      </figure>
     </div>
     <div class="photo-pair">
-      <img src="Lisbon-02.jpg" alt="Keith and Shirley at the Altamente High Point, 145 metres up the Vasco da Gama Tower">
-      <img src="Lisbon-03.jpg" alt="The boardwalk leading toward the Vasco da Gama Tower">
+      <figure>
+        <img src="Lisbon-02.jpg" alt="Keith and Shirley at the Vasco da Gama Tower observation deck, 145 metres up">
+        <figcaption>Vasco da Gama Tower, 145 m up</figcaption>
+      </figure>
+      <figure>
+        <img src="Lisbon-03.jpg" alt="The boardwalk leading toward the Vasco da Gama Tower">
+        <figcaption>Vasco da Gama Tower boardwalk</figcaption>
+      </figure>
     </div>
     <div class="photo-pair">
-      <img src="Lisbon-07.jpg" alt="Keith and Shirley at the Tower of Belém">
-      <img src="Lisbon-04.jpg" alt="Grilled fish with vegetables and salad at an outdoor Lisbon restaurant">
+      <figure>
+        <img src="Lisbon-07.jpg" alt="Keith and Shirley at the Torre de Belém">
+        <figcaption>Torre de Belém, Lisbon</figcaption>
+      </figure>
+      <figure>
+        <img src="Lisbon-04.jpg" alt="Grilled fish with vegetables and salad at an outdoor Lisbon restaurant">
+        <figcaption>Lunch at an outdoor restaurant, Lisbon</figcaption>
+      </figure>
     </div>
     <div class="photo-full">
-      <img src="Lisbon-01.jpg" alt="Ocean sunfish at the Oceanário de Lisboa">
+      <figure>
+        <img src="Lisbon-01.jpg" alt="Ocean sunfish at the Oceanário de Lisboa">
+        <figcaption>Mola mola (ocean sunfish), Oceanário de Lisboa</figcaption>
+      </figure>
     </div>
   </section>
 

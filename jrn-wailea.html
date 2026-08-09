@@ -33,6 +33,14 @@
     .article-nav-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.3rem; }
     .article-nav-title { font-family: var(--serif); color: var(--ink); line-height: 1.4; }
     .article-nav-title:hover { color: var(--green); }
+    .photo-grid { max-width: 700px; margin: 0 auto; padding: 0 2rem 3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .photo-pano figure, .photo-full figure, .photo-pair figure { margin: 0; }
+    .photo-pano img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-full img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .photo-pair img { width: 100%; height: 280px; object-fit: cover; object-position: center; display: block; border-radius: 2px; }
+    figcaption { font-size: 0.72rem; color: var(--ink-3); text-align: center; margin-top: 0.3rem; letter-spacing: 0.02em; }
+    @media (max-width: 500px) { .photo-pair { grid-template-columns: 1fr; } .photo-pair img { height: 220px; } }
     footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--ink-3); }
     .footer-logo { font-family: var(--serif); color: var(--green); }
   </style>
@@ -105,6 +113,21 @@
     <p>We went to Wailea to relax after selling the business.</p>
     <p>And that's what we did.</p>
   </article>
+  <section class="photo-grid">
+    <div class="photo-full">
+      <figure>
+        <img src="Wailea-01.jpg" alt="Two glasses of red wine on the patio table at sunset, Wailea Ekahi Village">
+        <figcaption>Sunset dinner on the lanai, Wailea Ekahi Village, Maui</figcaption>
+      </figure>
+    </div>
+    <div class="photo-pano">
+      <figure>
+        <img src="Wailea-02.jpg" alt="Keawakapu Beach with palm trees and the West Maui Mountains across the water">
+        <figcaption>Keawakapu Beach, Wailea, Maui</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <nav class="article-nav">
     <div class="article-nav-item">
       <p class="article-nav-label">← Previous</p>
