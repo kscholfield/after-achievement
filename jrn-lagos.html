@@ -33,6 +33,14 @@
     .article-nav-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.3rem; }
     .article-nav-title { font-family: var(--serif); color: var(--ink); line-height: 1.4; }
     .article-nav-title:hover { color: var(--green); }
+    .photo-grid { max-width: 700px; margin: 0 auto; padding: 0 2rem 3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .photo-pano figure, .photo-full figure, .photo-pair figure { margin: 0; }
+    .photo-pano img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-full img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .photo-pair img { width: 100%; height: 280px; object-fit: cover; object-position: center; display: block; border-radius: 2px; }
+    figcaption { font-size: 0.72rem; color: var(--ink-3); text-align: center; margin-top: 0.3rem; letter-spacing: 0.02em; }
+    @media (max-width: 500px) { .photo-pair { grid-template-columns: 1fr; } .photo-pair img { height: 220px; } }
     footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--ink-3); }
     .footer-logo { font-family: var(--serif); color: var(--green); }
   </style>
@@ -249,6 +257,40 @@
     <p>Lagos was no longer simply one of the places we'd visited in Portugal.</p>
     <p>It was becoming one of the places we wanted to come back to.</p>
   </article>
+  <section class="photo-grid">
+    <div class="photo-pano">
+      <figure>
+        <img src="Lagos-06.jpg" alt="Kayakers inside a dramatic sea cave at Ponta da Piedade, a beam of light streaming through an opening in the rock above, the arch framing the open ocean beyond">
+        <figcaption>Inside the sea caves at Ponta da Piedade — the kayak tour along the Algarve coast</figcaption>
+      </figure>
+    </div>
+    <div class="photo-pair">
+      <figure>
+        <img src="Lagos-01.jpg" alt="Keith diving from the upper deck of a catamaran into the Atlantic, golden limestone cliffs stretching along the coast behind him">
+        <figcaption>Off the boat and into the Atlantic — afternoon on the water off Lagos</figcaption>
+      </figure>
+      <figure>
+        <img src="Lagos-03.jpg" alt="View from the Forte da Ponta da Bandeira over the Lagos harbor entrance, the long beach of Meia Praia stretching into the distance">
+        <figcaption>The fort and harbor at Lagos, looking toward Meia Praia</figcaption>
+      </figure>
+    </div>
+    <div class="photo-full">
+      <figure>
+        <img src="Lagos-04.jpg" alt="Keith and Shirley standing on either side of the large Lagos coat of arms carved in stone, the old city walls and olive trees behind them">
+        <figcaption>The Lagos coat of arms, beside the old city walls</figcaption>
+      </figure>
+    </div>
+    <div class="photo-pair">
+      <figure>
+        <img src="Lagos-02.jpg" alt="A cataplana dish of fish, prawns and clams at restaurant Irmãos on the Lagos waterfront, a Super Bock beer and glass of white wine alongside">
+        <figcaption>Fish cataplana at Irmãos on the waterfront — our first dinner in Lagos</figcaption>
+      </figure>
+      <figure>
+        <img src="Lagos-05.jpg" alt="A white art deco building with green shutters and an arched entrance facing a cobblestone square in the old town of Lagos — a vacant storefront with an apartment above">
+        <figcaption>The storefront Shirley noticed — she wondered what kind of business she could put there, and whether we could live upstairs</figcaption>
+      </figure>
+    </div>
+  </section>
   <nav class="article-nav">
     <div class="article-nav-item">
       <p class="article-nav-label">← Previous</p>
