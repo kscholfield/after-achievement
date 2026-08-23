@@ -33,6 +33,14 @@
     .article-nav-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.3rem; }
     .article-nav-title { font-family: var(--serif); color: var(--ink); line-height: 1.4; }
     .article-nav-title:hover { color: var(--green); }
+    .photo-grid { max-width: 700px; margin: 0 auto; padding: 0 2rem 3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .photo-pano figure, .photo-full figure, .photo-pair figure { margin: 0; }
+    .photo-pano img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-full img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .photo-pair img { width: 100%; height: 280px; object-fit: cover; object-position: center; display: block; border-radius: 2px; }
+    figcaption { font-size: 0.72rem; color: var(--ink-3); text-align: center; margin-top: 0.3rem; letter-spacing: 0.02em; }
+    @media (max-width: 500px) { .photo-pair { grid-template-columns: 1fr; } .photo-pair img { height: 220px; } }
     footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--ink-3); }
     .footer-logo { font-family: var(--serif); color: var(--green); }
   </style>
@@ -146,6 +154,25 @@
     <p>Along the way, he pointed out towns and places worth returning to—Setúbal, Arrábida, Palmela and others.</p>
     <p>Portugal was beginning to feel less like a country we were working our way through and more like somewhere we were already thinking about coming back to explore differently.</p>
   </article>
+  <section class="photo-grid">
+    <div class="photo-pano"><figure><img src="Sintra-04.jpg" alt="Sintra village square with the Castelo dos Mouros on the hill above"><figcaption>Sintra — the Castelo dos Mouros above the town</figcaption></figure></div>
+    <div class="photo-pair">
+      <figure><img src="Sintra-01.jpg" alt="Sintra village overview with the Palácio Nacional de Sintra tower"><figcaption>Sintra village and the Palácio Nacional de Sintra</figcaption></figure>
+      <figure><img src="Sintra-02.jpg" alt="Castelo dos Mouros walls on the rocky hillside above Sintra"><figcaption>Castelo dos Mouros</figcaption></figure>
+    </div>
+    <div class="photo-full"><figure><img src="Sintra-10.jpg" alt="Palácio Nacional de Pena seen through the trees"><figcaption>Palácio Nacional de Pena</figcaption></figure></div>
+    <div class="photo-pair">
+      <figure><img src="Sintra-15.jpg" alt="Quinta da Regaleira palace seen through pink hydrangeas"><figcaption>Quinta da Regaleira</figcaption></figure>
+      <figure><img src="Sintra-12.jpg" alt="Looking down into the Initiation Well at Quinta da Regaleira"><figcaption>The Initiation Well, Quinta da Regaleira</figcaption></figure>
+    </div>
+    <div class="photo-pano"><figure><img src="Sintra-13.jpg" alt="The grottoes at Quinta da Regaleira"><figcaption>The grottoes at Quinta da Regaleira</figcaption></figure></div>
+    <div class="photo-pano"><figure><img src="Sintra-05.jpg" alt="Keith and Shirley at the Cabo da Roca monument — westernmost point of continental Europe"><figcaption>Cabo da Roca — the westernmost point of continental Europe</figcaption></figure></div>
+    <div class="photo-pano"><figure><img src="Sintra-09.jpg" alt="Museu Condes de Castro Guimarães, Cascais"><figcaption>Museu Condes de Castro Guimarães, Cascais</figcaption></figure></div>
+    <div class="photo-pair">
+      <figure><img src="Sintra-07.jpg" alt="Keith and Shirley at Boca do Inferno, Cascais"><figcaption>Boca do Inferno, Cascais</figcaption></figure>
+      <figure><img src="Sintra-06.jpg" alt="Statue of Luís de Camões in Cascais"><figcaption>Luís de Camões, Cascais</figcaption></figure>
+    </div>
+  </section>
   <nav class="article-nav">
     <div class="article-nav-item">
       <p class="article-nav-label">← Previous</p>
