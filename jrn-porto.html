@@ -33,6 +33,14 @@
     .article-nav-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.3rem; }
     .article-nav-title { font-family: var(--serif); color: var(--ink); line-height: 1.4; }
     .article-nav-title:hover { color: var(--green); }
+    .photo-grid { max-width: 700px; margin: 0 auto; padding: 0 2rem 3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .photo-pano figure, .photo-full figure, .photo-pair figure { margin: 0; }
+    .photo-pano img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-full img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .photo-pair img { width: 100%; height: 280px; object-fit: cover; object-position: center; display: block; border-radius: 2px; }
+    figcaption { font-size: 0.72rem; color: var(--ink-3); text-align: center; margin-top: 0.3rem; letter-spacing: 0.02em; }
+    @media (max-width: 500px) { .photo-pair { grid-template-columns: 1fr; } .photo-pair img { height: 220px; } }
     footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--ink-3); }
     .footer-logo { font-family: var(--serif); color: var(--green); }
   </style>
@@ -142,6 +150,29 @@
     <p>On July 15, we left Porto for the Douro Valley.</p>
     <p>And that's where the idea that we might actually be able to live this way started becoming much more real.</p>
   </article>
+  <section class="photo-grid">
+    <div class="photo-pano"><figure><img src="Porto-09.jpg" alt="Ponte Dom Luis I spanning the Douro River, seen from the hillside above Vila Nova de Gaia"><figcaption>Ponte Dom Lu&#237;s I over the Douro</figcaption></figure></div>
+    <div class="photo-pair">
+      <figure><img src="Porto-06.jpg" alt="The Ribeira waterfront with colorful buildings and the Guindais funicular track climbing the hillside"><figcaption>The Ribeira waterfront</figcaption></figure>
+      <figure><img src="Porto-07.jpg" alt="Cais da Ribeira promenade with Ponte Dom Luis I and the Teleférico de Gaia cable cars above"><figcaption>Cais da Ribeira</figcaption></figure>
+    </div>
+    <div class="photo-pair">
+      <figure><img src="Porto-02.jpg" alt="Shirley walking up a narrow cobblestone street in Porto's old town"><figcaption>Porto's old town</figcaption></figure>
+      <figure><img src="Porto-08.jpg" alt="Shirley in the Teleférico de Gaia cable car, with the Douro River and Porto behind her"><figcaption>Teleférico de Gaia</figcaption></figure>
+    </div>
+    <div class="photo-pano"><figure><img src="Porto-17.jpg" alt="The famous azulejo tile panels lining the walls of São Bento railway station"><figcaption>S&#227;o Bento station</figcaption></figure></div>
+    <div class="photo-pano"><figure><img src="Porto-11.jpg" alt="The grand interior atrium of the Palácio da Bolsa with its ornate glass dome"><figcaption>Pal&#225;cio da Bolsa</figcaption></figure></div>
+    <div class="photo-pair">
+      <figure><img src="Porto-03.jpg" alt="Torre dos Clérigos rising above outdoor café seating in the plaza below"><figcaption>Torre dos Cl&#233;rigos</figcaption></figure>
+      <figure><img src="Porto-05.jpg" alt="Igreja do Carmo and Igreja dos Carmelitas — the twin Baroque churches side by side"><figcaption>Igreja do Carmo &amp; dos Carmelitas</figcaption></figure>
+    </div>
+    <div class="photo-pair">
+      <figure><img src="Porto-13.jpg" alt="Porto City Hall at Praça General Humberto Delgado with the Porto sign in front"><figcaption>Porto City Hall</figcaption></figure>
+      <figure><img src="Porto-15.jpg" alt="Sé do Porto cathedral with the equestrian statue of Vimara Peres in the foreground"><figcaption>S&#233; do Porto</figcaption></figure>
+    </div>
+    <div class="photo-pano"><figure><img src="Porto-12.jpg" alt="Jardim do Infante Dom Henrique with the Henry the Navigator monument and the red Mercado Ferreira Borges behind"><figcaption>Jardim do Infante Dom Henrique</figcaption></figure></div>
+    <div class="photo-full"><figure><img src="Porto-01.jpg" alt="A beautifully plated fish dish with vibrant orange carrot puree and green vegetables"><figcaption>Dinner in Porto</figcaption></figure></div>
+  </section>
   <nav class="article-nav">
     <div class="article-nav-item">
       <p class="article-nav-label">← Previous</p>
