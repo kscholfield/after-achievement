@@ -33,6 +33,14 @@
     .article-nav-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.3rem; }
     .article-nav-title { font-family: var(--serif); color: var(--ink); line-height: 1.4; }
     .article-nav-title:hover { color: var(--green); }
+    .photo-grid { max-width: 700px; margin: 0 auto; padding: 0 2rem 3rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .photo-pano figure, .photo-full figure, .photo-pair figure { margin: 0; }
+    .photo-pano img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-full img { width: 100%; height: auto; display: block; border-radius: 2px; }
+    .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .photo-pair img { width: 100%; height: 280px; object-fit: cover; object-position: center; display: block; border-radius: 2px; }
+    figcaption { font-size: 0.72rem; color: var(--ink-3); text-align: center; margin-top: 0.3rem; letter-spacing: 0.02em; }
+    @media (max-width: 500px) { .photo-pair { grid-template-columns: 1fr; } .photo-pair img { height: 220px; } }
     footer { border-top: 1px solid var(--border); padding: 2rem 2.5rem; display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--ink-3); }
     .footer-logo { font-family: var(--serif); color: var(--green); }
   </style>
@@ -185,6 +193,19 @@
     <p>We'd only spent two nights in the Douro Valley.</p>
     <p>Once again, it wasn't enough.</p>
   </article>
+  <section class="photo-grid">
+    <div class="photo-pano"><figure><img src="Douro-01.jpg" alt="A river cruise ship on the Douro with clouds reflected in the still water"><figcaption>The Douro</figcaption></figure></div>
+    <div class="photo-pano"><figure><img src="Douro-02.jpg" alt="Sunset over the Douro river from Cobant"><figcaption>Sunset over the Douro from Cobant</figcaption></figure></div>
+    <div class="photo-full"><figure><img src="Douro-08.jpg" alt="Shirley kayaking on the Douro river"><figcaption>Kayaking on the Douro</figcaption></figure></div>
+    <div class="photo-pair">
+      <figure><img src="Douro-05.jpg" alt="A wooden footbridge on the trail along the Douro"><figcaption>The trail along the Douro</figcaption></figure>
+      <figure><img src="Douro-06.jpg" alt="Cobant seen from the trail, with the Douro river and hills behind"><figcaption>Cobant from the trail</figcaption></figure>
+    </div>
+    <div class="photo-pair">
+      <figure><img src="Douro-07.jpg" alt="Shirley with a glass of rosé at a table beside the Douro"><figcaption>Rosé after the trail</figcaption></figure>
+      <figure><img src="Douro-09.jpg" alt="Grilled chicken and fish with chips — dinner at Cobant"><figcaption>Dinner at Cobant</figcaption></figure>
+    </div>
+  </section>
   <nav class="article-nav">
     <div class="article-nav-item">
       <p class="article-nav-label">← Previous</p>
